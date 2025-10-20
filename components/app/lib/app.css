@@ -1,0 +1,70 @@
+/*
+
+App
+
+*/
+
+/* ---------- Tokens */
+
+:host {
+  --fscs-ref-pallete-neutral-000: #ffffff;
+  --fscs-ref-pallete-neutral-050: #f9f7f7;
+  --fscs-ref-pallete-neutral-100: #f1efef;
+  --fscs-ref-pallete-neutral-200: #e7e4e4;
+  --fscs-ref-pallete-neutral-300: #d8d4d4;
+  --fscs-ref-pallete-neutral-400: #aaa5a5;
+  --fscs-ref-pallete-neutral-500: #787474;
+  --fscs-ref-pallete-neutral-700: #464343;
+  --fscs-ref-pallete-neutral-800: #1d1d1d;
+
+  --fscs-ref-typeface: 'Inter';
+
+  --fscs-sys-colour-outline: var(--fscs-ref-pallete-neutral-300);
+  --fscs-sys-colour-outline-hover: var(--fscs-ref-pallete-neutral-400);
+  --fscs-sys-colour-surface: var(--fscs-ref-pallete-neutral-050);
+  --fscs-sys-colour-surface-hover: var(--fscs-ref-pallete-neutral-100);
+  --fscs-sys-colour-on-surface: var(--fscs-ref-pallete-neutral-700);
+  --fscs-sys-colour-on-surface-variant: var(--fscs-ref-pallete-neutral-500);
+  --fscs-sys-colour-surface-container: var(--fscs-ref-pallete-neutral-000);
+  --fscs-sys-colour-surface-container-outline: var(--fscs-ref-pallete-neutral-200);
+  --fscs-sys-colour-on-surface-container: var(--fscs-ref-pallete-neutral-700);
+
+  --fscs-sys-elevation-level1: 0 4px 16px rgba(0, 0, 0, 0.02);
+  --fscs-sys-elevation-level2: 0 8px 24px rgba(0, 0, 0, 0.03);
+
+  --fscs-sys-type-label-colour: var(--fscs-ref-pallete-neutral-400);
+}
+
+/* ---------- Host */
+
+:host {
+  box-sizing: border-box;
+  display: block;
+  min-height: 100vh;
+  background-color: var(--fscs-sys-colour-surface);
+  color: var(--fscs-sys-colour-on-surface);
+  font-family: var(--fscs-ref-typeface), sans-serif;
+  padding: 24px;
+
+   @media screen and (width >= 1024px) {
+    background-image: url('./assets/images/background.svg');
+    background-repeat: no-repeat;
+    background-size: 550px;
+    padding: 48px 24px;
+  }
+}
+
+.app {
+  @media screen and (width >= 1024px) {
+    margin: 0 auto;
+    max-width: 1268px;
+  }
+}
+
+.app__page {
+  @media screen and (width >= 1024px) {
+    display: grid;
+    grid-template-columns: 292px 1fr;
+    gap: 32px;
+  }
+}

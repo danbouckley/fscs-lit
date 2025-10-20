@@ -1,0 +1,27 @@
+{
+  "name": "fscs-lit",
+  "version": "0.0.1",
+  "main": "app/index.html",
+  "type": "module",
+  "scripts": {
+    "build:css": "node ./tools/build-css.js",
+    "build:ts": "tsc",
+    "clean:css": "node ./tools/clean-css.js",
+    "clean:ts": "tsc --build --clean",
+    "prestart": "npm run clean:css && npm run clean:ts && npm run build:css",
+    "serve": "wds",
+    "start": "npm run watch:css & npm run watch:ts & npm run serve",
+    "test": "web-test-runner \"components/**/*.test.js\" --node-resolve",
+    "watch:css": "node ./tools/watch-css.js",
+    "watch:ts": "tsc --watch"
+  },
+  "devDependencies": {
+    "@open-wc/testing": "^4.0.0",
+    "@types/mocha": "^10.0.10",
+    "@web/dev-server": "^0.4.6",
+    "@web/test-runner": "^0.20.2",
+    "chokidar": "^4.0.3",
+    "lit": "^3.3.1",
+    "typescript": "^5.9.3"
+  }
+}

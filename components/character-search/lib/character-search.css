@@ -1,0 +1,68 @@
+/*
+
+Character Search
+
+*/
+
+/* ---------- Component */
+
+.character-search {
+  position: relative;
+}
+
+/* ---------- Elements */
+
+.character-search__submit,
+.character-search__clear {
+  position: absolute;
+  top: 0;
+  border: none;
+  background: none;
+  width: 48px;
+  height: 48px;
+  padding: 16px;
+  cursor: pointer;
+  color: var(--fscs-sys-colour-on-surface-variant);
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(--fscs-sys-colour-on-surface);
+  }
+}
+
+.character-search__submit {
+  left: 0;
+}
+
+.character-search__clear {
+  right: 0;
+}
+
+.character-search__input {
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid var(--fscs-sys-colour-outline);
+  border-radius: calc(infinity * 1px);
+  box-shadow: var(--fscs-sys-elevation-level1);
+  font: inherit;
+  font-size: calc(14 / 16 * 1rem);
+  line-height: 1.6;
+  min-height: 48px;
+  flex: 1;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+  transition: all 0.2s;
+
+  &::placeholder {
+    color: var(--fscs-sys-colour-on-surface-variant);
+  }
+
+  @media screen and (width >= 1024px) {
+    text-align: left;
+  }
+
+  &:hover {
+    border-color: var(--fscs-sys-colour-outline-hover);
+  }
+}
