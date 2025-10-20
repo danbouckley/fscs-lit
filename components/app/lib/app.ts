@@ -1,5 +1,5 @@
 import { html, LitElement, type HTMLTemplateResult } from 'lit';
-import { property, state } from 'lit/decorators.js';
+import { state } from 'lit/decorators.js';
 
 import '../../character-detail/index.js';
 import '../../character-list/index.js';
