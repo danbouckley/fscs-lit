@@ -45,7 +45,7 @@ export const MOCK_CHARACTERS: CHARACTER[] = [{
 export const characterService = {
   
   async fetchCharacters(): Promise<CHARACTER[]> {
-    const response = await fetch('./data/characters.json');
+    const response = await fetch('/app/data/characters.json');
     if (!response.ok) throw new Error(`${response.status}`);
     const characters = await response.json();
     return characters;

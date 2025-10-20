@@ -47,7 +47,7 @@ App
   padding: 24px;
 
    @media screen and (width >= 1024px) {
-    background-image: url('./assets/images/background.svg');
+    background-image: url('/app/assets/images/background.svg');
     background-repeat: no-repeat;
     background-size: 550px;
     padding: 48px 24px;
